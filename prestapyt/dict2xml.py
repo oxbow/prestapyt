@@ -104,7 +104,7 @@ def _process_simple(doc, tag, tag_value):
     @return: node
     """
     node = doc.createElement(tag)
-    node.appendChild(doc.createTextNode(unicode(tag_value)))
+    node.appendChild(doc.createTextNode(unicode(tag_value.decode('utf8'))))
     return node
 
 def dict2xml(data, encoding='UTF-8'):
